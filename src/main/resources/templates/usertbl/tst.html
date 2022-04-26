@@ -26,18 +26,18 @@
         </thead>
         <tbody>
             <tr th:each="user_tbl : ${UtblSer}" th:object="${user_tbl}">
-                <td class="center" th:text="*{USER_ID}"></td>
-                <td class="center" th:text="*{USER_NAME}"></td>
-                <td class="center" th:text="*{USER_PASS}"></td>
-                <td class="center" th:text="*{USER_SEX}"></td>
-                <td class="center" th:text="*{USER_AGE}"></td>
-                <td class="center" th:text="*{USER_JOB}"></td>
-                <td class="center" th:text="*{USER_EMAIL}"></td>
-                <td class="center" th:text="*{USER_PROFILE}"></td>
-                <td class="center" th:text="*{USER_FAV}"></td>
-                <td class="center" th:text="${#dates.format(user_tbl.USER_ENTRY, 'yyyy/MM/dd')}"></td>
-                <td class="center" th:text="*{USER_GAME_ADDRESS}"></td>
-                <td class="center" th:text="*{USER_LOGIN}"></td>
+                <td class="center" th:text="*{id}"></td>
+                <td class="center" th:text="*{name}"></td>
+                <td class="center" th:text="*{pass}"></td>
+                <td class="center" th:text="*{sex}"></td>
+                <td class="center" th:text="*{age}"></td>
+                <td class="center" th:text="*{job}"></td>
+                <td class="center" th:text="*{email}"></td>
+                <td class="center" th:text="*{profile}"></td>
+                <td class="center" th:text="*{fav}"></td>
+                <td class="center" th:text="${#dates.format(user_tbl.entry, 'yyyy/MM/dd')}"></td>
+                <td class="center" th:text="*{address}"></td>
+                <td class="center" th:text="*{login}"></td>
             </tr>
         </tbody>
     </table>
