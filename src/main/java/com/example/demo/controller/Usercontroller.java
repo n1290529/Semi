@@ -31,7 +31,7 @@ public class Usercontroller {
 	 * @param model Model
 	 * @return ユーザー情報一覧画面のHTML
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)	
+	@RequestMapping(value = "/list", method = RequestMethod.GET)	
 	public String displayList(Model model) {
 
 		List<User> usernamesList = userService.serchNameUsers("test1");//name検索
