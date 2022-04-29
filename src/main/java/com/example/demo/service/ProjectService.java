@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,12 +14,16 @@ import com.example.demo.repository.ProjectRepository;
 public class ProjectService {
 
 //User_tblのRpository呼び出しとUtblRepoでの実装
-    @Autowired
-    ProjectRepository ProjctRepo;
-    
-    // ユーザーTBLの内容を全検索
-    public List<Projecttbl> searchAll() {
-        return ProjctRepo.findAll();
-    }
-    
+	@Autowired
+	ProjectRepository ProjctRepo;
+
+	// ユーザーTBLの内容を全検索
+	public List<Projecttbl> searchAll() {
+		return ProjctRepo.findAll();
+	}
+
+	public Optional<Projecttbl> searchId(String id) {
+		return ProjctRepo.findById(id);
+	}
+
 }
