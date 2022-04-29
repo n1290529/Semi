@@ -14,8 +14,8 @@ public class Followtbl {
 	
 	@Id
     @Column(name = "FK_USER_ID")
-    private String FK_USER_ID;
+    private String id;
 	
 	@Column(name = "FOLLOW_USER_ID")
-    private String FOLLOW_USER_ID;
+    private String fid;
 }

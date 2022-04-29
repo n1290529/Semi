@@ -11,4 +11,6 @@ import com.example.demo.entity.Usertbl;
 @Repository
 public interface UsertblRepository extends JpaRepository<Usertbl, String> {
 	List<Usertbl> findByIdAndPass(String id, String pass);
+	List<Usertbl> findByNameAndPass(String name, String pass);
+	List<Usertbl> findByEmailAndPass(String email, String pass);
 }
